@@ -1,0 +1,324 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;  /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+}
+.logo-container svg {
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('1920 x 970 115.7kb.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ff8827;
+    text-align: center;
+    position: relative;
+}
+
+.hero .tagline {
+    font-size: 1.5em;
+    position: absolute;
+    top: 80%; /* Adjust the distance from the top as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap; /* Ensures the tagline stays on a single line */
+}
+
+.carousel-section {
+    padding: 2em 0;
+    background-color: #000000ee;
+    overflow-x: scroll;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    background-color: #00000084;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item:hover {
+    transform: translateY(-20px);
+}
+
+.carousel-item h2, .carousel-item p {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    background: #f4f4f4;
+    color: #ffffff;
+}
+
+#about .info-content {
+    padding-top: 100px; /* Adjust this value to move the content down */
+    padding-left: 130px;
+    justify-content: center;
+}
+
+.info-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-content {
+    max-width: 800px;
+}
+
+.info-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.parallax {
+    background: url('top-view-delicious-spaghetti-with-copy-space_23-2150857950.avif') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+#book-table-btn {
+    background-color: #ffffff; /* Green */
+    border: none;
+    shape-margin: 10%;
+    border-radius: 30%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: calc(100vh - 1967px); /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the button appears above other elements */
+}
+
+
+
+  #about-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative; /* Ensure the heading stays in its place */
+    left: 30%; /* Adjust this value to control horizontal position */
+    text-align:left;
+}
+
+/* Reservation Section Styling */
+#reservation {
+    background: url('chinese-restaurant-features-red-lanterns-as-fixtures-outside-its-facade-buildings-dark-exterior-accented-traditional-art-314477392.webp') no-repeat center center/cover fixed;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation .info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#reservation-form {
+    display: flex;
+    flex-direction: column;
+    width: 300%;
+    max-width: 600px;
+    background-color: #ff8827;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reservation-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#reservation-form input,
+#reservation-form textarea, #reservation-form select {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Ensures consistent padding and border-radius */
+}
+
+#reservation-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reservation-form button:hover {
+    background-color: #555;
+}
+
+.popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.show-popup {
+    display: block;
+}
+
+/* Added a class for the blur background */
+.blur-background {
+    backdrop-filter: blur(10px);
+}
+
+/* Added a class for the contact overlay */
+#contact img {
+    max-width: 100%;
+    height: 600px;
+    display: block;
+    margin: 0;
+}
+
+/* Style the contact links */
+#contact a {
+    color: #ff8827; /* Change link color as needed */
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Style the contact text */
+#contact .contact-text {
+    margin-top: 1px;
+    font-size: 1.2em;
+    color: #333; /* Change text color as needed */
+}
+
+#contact {
+    background: url('360_F_630880161_0m4cwaGBLFBhoqy5rlI2VkIhRv8SlrPw.jpg') no-repeat center center/cover fixed; /* Replace 'your-background-image.jpg' with the path to your background image */
+    padding: 50px; /* Adjust padding as needed */
+    color: #ffffff; /* Adjust text color as needed */
+    text-align: center; /* Align text to center */
+}
+
+/* Additional styles for contact links and text can be added here if needed */
